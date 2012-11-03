@@ -52,81 +52,63 @@
 
 <p>This recap doesn't cover installing Rails, since after the event, you should already have it installed.  I've linked liberally to a site called <a href="http://skillcrush.com/">Skillcrush</a>, which defines tech terms using non-technical language.</p>
 
-<h2>Tools</h2>
+<h2>Other, more in-depth resources and help</h2>
+
+<ul>
+<li>
+<a href="http://guides.railsgirls.com/app/">Rails Girls App Tutorial</a>: instructions on how to set up a Blog app</li>
+<li>
+<a href="http://guides.rubyonrails.org/getting_started.html">Ruby on Rails Guide</a>: getting started (this is slightly technical)</li>
+<li>
+<a href="http://pdxruby.org/">Portland Ruby Brigade Beginner's Meetups</a>: a once-monthly gathering where Ruby experts are happy to help</li>
+</ul><h2>Tools</h2>
 
 <p>Before getting started on our first Rails app, there are a few tools with which we need to be familiar</p>
 
-<h3>Command Prompt</h3>
-
-<p>The command prompt is a text-only program that allows you to interact with your operating system.  We use it to go to different places (directories) on your hard drive, to start our Rails <a href="http://skillcrush.com/2012/07/03/web-server-2/">web server</a>, and to run other commands.  Since this group was almost all Windows users, the commands and instructions in this section are for Windows.</p>
-
-<p><strong>In order to open your command prompt</strong></p>
-
-<ol>
-<li><p>Go to the Start Menu.</p></li>
-<li><p>Search for <em>Command Prompt with Ruby on Rails</em> and select it.</p></li>
-<li><p>This opens up the command prompt and usually puts you in the <code>C:\Sites</code> folder on your hard drive.</p></li>
-</ol><p><strong>There are a few commands that we used regularly during our meetup</strong></p>
-
 <ul>
 <li>
-<code>dir</code> lists all the folders and files in the current directory you are in.
-It's equivalent to opening up your Windows Explorer and seeing all the icons/pictures for the folders and documents you have -- only it's all text.</li>
-<li>
-<code>cd</code> will change your current directory (folder).
-For example, to go from <code>C:\Sites</code> to <code>C:\Sites\new_app</code> (if that were your Rails app), you would type <code>cd new_app</code>.  To go back to <code>C:\Sites</code> you would type <code>cd ..</code> -- the <code>..</code> means go up one directory.</li>
-</ul><p><strong>Try this</strong>: let's navigate to the blogs app that we created and look at what files and directories are in the app. (at the end of each line below, press enter!)</p>
-
-<pre><code>cd C:\Sites\blogs
-dir
-</code></pre>
-
-<p>You should see a few directories and files like the ones below -- often, if you see a <code>.</code> in the name, it means it is a file (though that's not always true!)</p>
-
-<pre><code>app
-config
-config.ru &lt;-- file
-db
-doc
-Gemfile &lt;-- also a file !
-Gemfile.lock
-lib
-log
-public
-Rakefile &lt;-- file !
-README.rdoc &lt;-- file that most apps have that often explains to other programmers what the app does
-script
-test
-tmp
-vendor
-</code></pre>
-
-<p>We'll cover Rails-specific commands for the command prompt later on, once we go over creating a Rails app.</p>
-
-<h3>Text editor (Komodo)</h3>
-
-<h3>Browser</h3>
-
-<h2>Concepts</h2>
+<p><strong>Command Prompt</strong><br>
+The command prompt is a text-only program that allows you to interact with your operating system. We use it to go to different places (directories) on your hard drive, to start our Rails web server, and to run other commands.  </p>
 
 <ul>
-<li>Ruby</li>
-<li>Gems</li>
-<li>Ruby on Rails</li>
-<li>Models, Views, and Controllers</li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Command-Prompt">Learn More...</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Text editor</strong><br>
+A text editor is a text editing program, similar to Microsoft Word, but for code. -- <a href="http://skillcrush.com/2012/09/10/text-editor/">Skillcrush</a>   </p>
+
+<ul>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Text-Editor">Learn More...</a></li>
+</ul>
+</li>
+<li><p><strong>Web Browser</strong><br>
+Chrome, Firefox, and Internet Explorer are all web browsers.  When you run <code>rails s</code>, this is where you'll go to see your app!</p></li>
+</ul><h2>Concepts</h2>
+
+<ul>
+<li><p><strong>Ruby</strong><br>
+A <a href="http://skillcrush.com/2012/04/05/programming-languages/">programming language</a> that's easy for humans to understand.  It's the language that we used to create our blog app during RailsGirls.<br><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Ruby">Learn more...</a></p></li>
+<li><p><strong>Gems</strong><br>
+Gems are a collection of Ruby code that are meant to do one (or sometimes more) things well so that you don't have to write your own code to do the same thing.<br><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Ruby-Gems">Learn more...</a></p></li>
+<li><p><strong>Ruby on Rails</strong><br>
+Ruby on Rails is what you came to RailsGirls to learn.  It is a collection of gems that gives us everything we need to make a dynamic website (like a To Do list, a blog, or even something like Etsy) quickly and easily.  We'll learn more about this in the "Do stuff!" section.</p></li>
+<li><p><strong>Models, Views, and Controllers</strong>
+More commonly referred to as <a href="http://skillcrush.com/2012/08/03/mvc/">MVC</a>, Models, Views, and Controllers are a common way to organize the code in a web app.  Models are the Things in your app, like a Blog Entry, a User or a Comment (they're usually capitalized like that too).  Views are what you see in your web browser.  Controllers wrangle the other two together.<br><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/MVC-(Models,-Views,-and-Controllers">Learn more...</a></p></li>
 </ul><h2>Do stuff!</h2>
 
 <ul>
-<li>Creating a new Rails app</li>
-<li>Generating a Scaffold for Blog Entry functionality</li>
-<li>Adding a new Gem (twitter-bootstrap-rails</li>
-<li>Modifying your views</li>
-</ul><h1>Topics we mentioned:</h1>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Creating-a-New-App"><strong>Creating a new Rails app</strong></a></li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Generating-a-Scaffold-for-Blog-Entries"><strong>Generating a Scaffold for Blog Entry functionality</strong></a></li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Ruby-Gems"><strong>Adding a new Gem</strong></a></li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Changing-the-way-your-site-looks"><strong>Changing the way your site looks</strong></a></li>
+</ul><h2>Topics we mentioned</h2>
 
 <ul>
-<li>Renaming your app</li>
-<li>JSON and Hashes</li>
-<li>Sending emails with Rails</li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Hashes-and-JSON"><strong>Hashes and JSON</strong></a></li>
+<li><strong><a href="http://skillcrush.com/2012/04/18/ajax/">AJAX</a>, <a href="http://skillcrush.com/2012/07/13/rest/">REST</a>, and <a href="http://skillcrush.com/2012/07/04/api-2/">APIs</a></strong></li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Renaming-your-App"><strong>Renaming your app</strong></a></li>
+<li><a href="https://github.com/lkemmerer/railsgirlspdx-recap/wiki/Sending-Emails-with-Rails"><strong>Sending emails with Rails</strong></a></li>
 </ul>
       </section>
 
